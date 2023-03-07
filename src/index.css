@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #003b49;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header nav{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  color:#fff;
+}
+
+header nav a{
+  height: 35px;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+header nav a.active {
+  background: #dfdfdf;
+  color: #003b49;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.card h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.num-display {
+  position: relative;
+  background: #f4f4f4;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: 2px #eee solid;
+  transition: 0.3s;
+}
+
+.num-display {
+  background: rgb(255, 187, 0);
+  color: #fff;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+textarea {
+  flex-grow: 2;
+  border: none;
+  font-size: 16px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.feedback-stats {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.num-display {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.close,
+.edit {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #003b49;
+  font-size: 16px;
+}
+.close:hover,
+.edit-btn:hover{
+  background: rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+.edit-btn{
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  height: 24px;
+  width: 24px;
+}
+.edit-btn img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.edit {
+  right: 40px;
+}
+
+.btn {
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #003b49;
+}
+
+.btn-secondary {
+  background: rgb(255, 187, 0);
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.btn:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.message {
+  padding-top: 10px;
+  text-align: center;
+  color: #003b49;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin: 10px 0;
+}
+
+.rating-wrapper{
+  font-size: 1.2em;
+  color: #003b49;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rating-wrapper select{
+  border: 3px solid #003b49;
+  border-radius: 2px;
+  border-bottom-right-radius: 20px;
+  background:#fff;
+  outline: none;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: 'Poppins';
+  margin-left: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  
+  body{
+    font-size: 0.9em;
+  }
+  .input-group textarea {
+    width: 80%;
+  }
+  header nav a.active{
+    padding: 6px;
+  }
+  .btn{
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+  }
+  .card {
+    padding: 20px 25px;
+    margin: 20px 0;
+    position: relative;
+  }
+  .num-display{
+    width: 30px;
+    height: 30px;
+    font-size: 0.9em;
+    padding: 5px;
+  }
+  .close {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #003b49;
+    font-size: 16px;
+  }
+  .edit-btn{
+    top: 2px;
+    right: 30px;
+  }
+  .rating-wrapper select{
+    width: 45px;
+    height: 25px;
+    border-bottom-right-radius: 10px;
+  }
+}
